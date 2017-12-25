@@ -1,15 +1,19 @@
 import React, { Component } from 'react';
-export default class Home extends Component {
+import Top from '../../component/app/top.jsx';
+import Context from '../../component/app/context.jsx';
+
+export default class App extends Component {
   componentDidMount() {
   }
 
+  switchContext(item) {
+    console.log(item);
+  }
+
   render() {
-    return <div>
-      <div className="main">
-        <div className="page-container page-component">
-          ddd
-        </div>
-      </div>
+    return <div className="page">
+      <Top switchContext={this.switchContext}></Top>
+      <Context ></Context>
     </div>;
   }
 }
